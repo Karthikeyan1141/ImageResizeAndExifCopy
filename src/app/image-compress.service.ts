@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 declare var ExifRestorer: any;
 
-var max_width = 1024;
-var max_height = 1024;
+var max_width = 2048;
+var max_height = 2048;
 
 @Injectable({
   providedIn: 'root'
@@ -61,7 +61,7 @@ export default class ImageCompressService {
   ctx?.drawImage(img, 0, 0, width, height);
   
   
-  return canvas.toDataURL(type,0.7); // get the data from canvas as 70%
+  return canvas.toDataURL(type,0.9); // get the data from canvas as 90%
   }
 
   convertBlobToBase64 = async (blob: any) => { // blob data
