@@ -1,0 +1,22 @@
+<div>
+    Demo Application for Image compress & retain EXIF data
+  </div>
+  <div>
+    Select file:
+    <input id="image" type="file" #imageFile accept="image/*" (change)="compressImage($event)" />
+  <p>
+    Size Comparison 
+    <br />Source Size :{{sourceSize}}
+    <br />Output Size :{{compressedSize}}
+  </p>
+  </div>
+  <table>
+    <tr>
+      <td>input preview</td>
+      <td>output preview</td>
+    </tr>
+    <tr>
+      <td><img id="preview" [src]="preview"/></td>
+      <td><img id="preview-after-compress" [src]="result" /></td>
+    </tr>
+  </table>
